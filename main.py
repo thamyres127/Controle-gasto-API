@@ -8,9 +8,10 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-DATABASE_URL = os.environ["DATABASE_URL"]
-CATEGORIAS = ["contas da casa", "lazer", "mercado", "transporte"]
 
+DATABASE_URL = os.environ["DATABASE_URL"].strip().strip("'\"")
+_host = DATABASE_URL.split("@")[-1].split("/")[0] if "@" in DATABASE_URL else "SEM ARROBA"
+print(f"DIAGNOSTICO: tamanho={len(DATABASE_URL)} comeco={DATABASE_URL[:13]} host={_host}", flush=True)
 
 def executar(sql, params=(), buscar=False):
     conn = psycopg2.connect(DATABASE_URL)
