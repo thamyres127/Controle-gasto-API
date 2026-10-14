@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Limpeza de Dados</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: #161b22;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #30363d;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            margin-top: 30px;
+        }
+        h1 { color: #58a6ff; font-size: 22px; text-align: center; }
+        .status-box {
+            background: #21262d;
+            border-left: 4px solid #f2c94c;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .btn {
+            background-color: #238636;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            width: 100%;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn:hover { background-color: #2ea44f; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>清洁 Data Cleaning Dashboard</h1>
+        <p>Interface conectada ao motor de inteligência em Python para tratamento de bases de dados corrompidas ou duplicadas.</p>
+        <div class="status-box">
+            <strong>Status do Sistema:</strong> Aguardando execução do script de back-end (`server.py`) para higienização dos registros SQL.
+        </div>
+        <button class="btn" onclick="alert('Iniciando integração com o script Python...')">Executar Limpeza Automatizada</button>
+    </div>
+</body>
+</html>
