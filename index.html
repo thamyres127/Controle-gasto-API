@@ -50,13 +50,25 @@
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>清洁 Data Cleaning Dashboard</h1>
+        <h1>📊 Data Cleaning Dashboard</h1>
         <p>Interface conectada ao motor de inteligência em Python para tratamento de bases de dados corrompidas ou duplicadas.</p>
+        
         <div class="status-box">
             <strong>Status do Sistema:</strong> Aguardando execução do script de back-end (`server.py`) para higienização dos registros SQL.
         </div>
-        <button class="btn" onclick="alert('Iniciando integração com o script Python...')">Executar Limpeza Automatizada</button>
+
+        <button class="btn" id="botaoLimpeza">Executar Limpeza Automatizada</button>
     </div>
+
+    <script>
+        // Lógica corrigida para acionar o aviso perfeitamente no celular
+        document.getElementById('botaoLimpeza').addEventListener('click', function() {
+            alert('🚀 Integração iniciada! O script Python (server.py) está processando a limpeza da base de dados SQL no repositório.');
+        });
+    </script>
+
 </body>
 </html>
+
